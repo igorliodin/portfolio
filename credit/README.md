@@ -1,4 +1,4 @@
-#Credit
+# Credit
 
 ### Overview
 
@@ -15,8 +15,8 @@ More info here: [Wikipedia](https://en.wikipedia.org/wiki/Luhn_algorithm)
 
 ### Usage
 
-$ python credit.py
+> $ python credit.py
 
-The program will prompt for a credit card number to check.
-A valid number should result in a credit card type: Visa, MasterCard or AMEX.
+The program will prompt for a credit card number to check.<br>
+A valid number should result in a message containing credit card type: Visa, MasterCard or AMEX.<br>
 An invalid number results in a corresponding message: "INVALID"
