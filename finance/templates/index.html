@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h2>Your Stats</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in stats %}
+            <tr>
+                <td>{{ row.symbol }}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.quantity}}</td>
+                <td>{{ '%0.2f'|format(row.price) }}</td>
+                <td>{{ '%0.2f'|format(row.total) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p style="padding: 0 1em 1em 0;"></p>
+    <p style="text-align: left; padding: 3em;">
+        <b>Your cash is:</b> ${{ '%0.2f'|format(cash) }}<br><br>
+        <b>Grand Total:</b> ${{ '%0.2f'|format(grand) }}<br>
+    </p>
+{% endblock %}
